@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void copia_string(char destino[], const char origem[]) {
+    int i = 0;
+    while (origem[i] != '\0') {
+        destino[i] = origem[i];
+        i++;
+    }
+    destino[i] = '\0';
+}
+
+int main() {
+    char destino[100];
+    copia_string(destino, "Esse é o conteúdo que vai para a variável.");
+    printf("Destino: %s\n", destino);
+
+    char string_origem[] = "Esta é a string de origem.";
+    copia_string(destino, string_origem);
+    printf("Destino: %s\n", destino);
+
+    return 0;
+}
